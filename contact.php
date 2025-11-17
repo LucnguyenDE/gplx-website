@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CONTACT PAGE - UI MODERN */
+.form-section {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+}
+
+.form-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* FORM BOX */
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: none;
+}
+
+/* LABEL */
+.contact-form label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* INPUT & TEXTAREA */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    margin-top: 5px;
+    transition: all 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+    outline: none;
+}
+
+/* BUTTON */
+.contact-form button {
+    width: 100%;
+    padding: 13px;
+    background: #0d6efd;
+    border: none;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #0a58ca;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 25px;
+    }
+
+    .form-section h2 {
+        font-size: 24px;
+    }
+}
+    </style>
+<body>
+<?php include __DIR__ . '/components/header.php'; ?>
+    <!-- Contact Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Hãy để lại thông tin, chúng tôi sẽ liên hệ lại trong vòng 24 giờ.</p>
+
+            <form action="#" method="post" class="contact-form">
+                <label>Họ và tên:</label>
+                <input type="text" name="fullname" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Số điện thoại:</label>
+                <input type="text" name="phone" required>
+
+                <label>Nội dung:</label>
+                <textarea name="message" rows="4" required></textarea>
+
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </div>
+    </section>
+
+<?php include __DIR__ . '/components/footer.php'; ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
