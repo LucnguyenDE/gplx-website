@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$fullname', '$phone', '$email', '$course', '$note')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Đăng ký thành công!'); window.location.href='../register.html';</script>";
+        echo "<script>alert('Đăng ký thành công!'); window.location.href='../index.php';</script>";
     } else {
         echo "<script>alert('Lỗi: " . $conn->error . "'); window.history.back();</script>";
     }
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 } else {
     // Nếu truy cập trực tiếp
-    header("Location: register.html");
+    header("Location: register.php");
     exit();
 }
 ?>

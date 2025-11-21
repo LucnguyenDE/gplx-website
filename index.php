@@ -1,7 +1,5 @@
 <!-- Home page -->
- 
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -19,13 +17,13 @@
 <?php include __DIR__ . '/components/header.php'; ?>
 
   <!-- HERO SECTION -->
-  <section class="hero text-center text-white d-flex align-items-center" style="background:url('assets/img/banner.jpg') center/cover no-repeat; height:70vh;">
-    <div class="container">
-      <h1 class="fw-bold">Trung tâm Đào tạo & Thi sát hạch Lái xe</h1>
+  <section class="hero-section d-flex align-items-center text-center text-white">
+  <div class="container position-relative">
+      <h1 class="fw-bold">Cơ sở Đào tạo & Tổ chức thi Sát hạch Lái xe</h1>
       <p class="lead mt-3">Học lý thuyết – Thực hành – Mô phỏng – Thi thử trực tuyến</p>
       <a href="register.php" class="btn btn-warning btn-lg mt-3">Đăng ký ngay</a>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- GIỚI THIỆU -->
   <section class="py-5">
@@ -43,8 +41,8 @@
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">Học mô phỏng hiện đại</h5>
-              <p class="card-text">Ứng dụng công nghệ AI và mô phỏng 3D giúp học viên tiếp cận sát thực tế thi.</p>
+              <h5 class="card-title">Học lý thuyết online từ xa</h5>
+              <p class="card-text">Hỗ trợ học viên học Lý thuyết online, không cần đến trường.</p>
             </div>
           </div>
         </div>

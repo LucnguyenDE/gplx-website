@@ -1,7 +1,7 @@
 <!-- HEADER -->
   <header class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.php">GPLX CENTER</a>
+      <a class="navbar-brand fw-bold" href="index.php">Tư Thục Bình Phước</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>

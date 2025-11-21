@@ -53,7 +53,7 @@
             <div class="theory-list">
 
                 <div class="theory-card">
-                    <h3>1. Khái niệm và quy tắc giao thông</h3>
+                    <h3>1. Các quy định, quy tắc giao thông đường bộ</h3>
                     <p>Giải thích các khái niệm cơ bản, nguyên tắc tham gia giao thông.</p>
                     <a class="btn" href="#">Xem bài</a>
                 </div>
@@ -65,14 +65,14 @@
                 </div>
 
                 <div class="theory-card">
-                    <h3>3. Sa hình & quy tắc ưu tiên</h3>
+                    <h3>3. Các dạng câu sa hình</h3>
                     <p>Hướng dẫn giải sa hình đúng luật và nhanh.</p>
                     <a class="btn" href="#">Xem bài</a>
                 </div>
 
                 <div class="theory-card">
-                    <h3>4. Văn hóa & đạo đức người lái xe</h3>
-                    <p>Những hành vi phải tránh – trách nhiệm khi lái xe.</p>
+                    <h3>4. Các câu điểm liệt</h3>
+                    <p>Tình huống giao thông mất an toàn nghiêm trọng.</p>
                     <a class="btn" href="#">Xem bài</a>
                 </div>
 

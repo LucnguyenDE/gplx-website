@@ -1,35 +1,120 @@
-body {
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
+    /* index PAGE */
+    .hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    }
 
-.hero h1 {
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-}
+    /* Ảnh nền */
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/bg-index.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(75%); /* làm tối để chữ nổi */
+        /* Hoặc thêm blur nếu anh muốn */
+        /* filter: brightness(60%) blur(4px); */
+        z-index: 1;
+    }
 
-.hero p {
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
+    /* Nội dung phía trên */
+    .hero-section .container {
+        position: relative;
+        z-index: 2; /* Đặt trên ảnh nền */
+    }
+        
+    
+    /* CONTACT PAGE - UI MODERN */
+    .form-section {
+        padding: 60px 20px;
+        background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+    }
 
-.card-title {
-  color: #0d6efd;
-}
+    .form-section h2 {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        color: #0d6efd;
+        margin-bottom: 10px;
+    }
 
-/* course */
-.card-title {
-  color: #0d6efd;
-  font-weight: 600;
-}
+    .form-section p {
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
 
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
+    /* FORM BOX */
+    .contact-form {
+        max-width: 550px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        border: none;
+    }
 
-.card img {
-  height: 180px;
-  object-fit: cover;
-}
+    /* LABEL */
+    .contact-form label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 10px;
+    }
 
+    /* INPUT & TEXTAREA */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 15px;
+        border: 1px solid #cfd8dc;
+        border-radius: 8px;
+        margin-top: 5px;
+        transition: all 0.25s ease;
+    }
 
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+        outline: none;
+    }
+
+    /* BUTTON */
+    .contact-form button {
+        width: 100%;
+        padding: 13px;
+        background: #0d6efd;
+        border: none;
+        color: white;
+        font-size: 17px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .contact-form button:hover {
+        background: #0a58ca;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 576px) {
+        .contact-form {
+            padding: 25px;
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+        }
+    }
