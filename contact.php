@@ -16,7 +16,7 @@
             <h2>Liên hệ với chúng tôi</h2>
             <p>Hãy để lại thông tin, chúng tôi sẽ liên hệ lại trong vòng 24 giờ.</p>
 
-            <form action="#" method="post" class="contact-form">
+            <form action="db/contact_process.php" method="POST" class="contact-form" >
                 <label>Họ và tên:</label>
                 <input type="text" name="fullname" required>
 
@@ -26,7 +26,7 @@
                 <label>Số điện thoại:</label>
                 <input type="text" name="phone" required>
 
-                <label>Nội dung:</label>
+                <label>Nội dung muốn tư vấn:</label>
                 <textarea name="message" rows="4" required></textarea>
 
                 <button type="submit">Gửi liên hệ</button>

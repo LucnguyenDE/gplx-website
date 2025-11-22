@@ -41,21 +41,21 @@ if($selectedCourse == "C1"){
             
             <!-- Họ tên -->
             <div class="mb-3">
-              <label for="fullname" class="form-label">Họ và tên</label>
+              <label for="fullname" class="form-label">Họ và tên:</label>
               <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
               <div class="invalid-feedback">Vui lòng nhập họ tên</div>
             </div>
 
             <!-- Số điện thoại -->
             <div class="mb-3">
-              <label for="phone" class="form-label">Số điện thoại</label>
+              <label for="phone" class="form-label">Số điện thoại:</label>
               <input type="tel" class="form-control" id="phone" name="phone" placeholder="0912345678" required pattern="[0-9]{9,11}">
               <div class="invalid-feedback">Nhập số điện thoại hợp lệ (9-11 số)</div>
             </div>
 
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email:</label>
               <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
               <div class="invalid-feedback">Nhập email hợp lệ</div>
             </div>
@@ -91,13 +91,13 @@ if($selectedCourse == "C1"){
 
             <!-- Ghi chú (nếu cần) -->
             <div class="mb-3">
-              <label for="note" class="form-label">Ghi chú</label>
+              <label for="note" class="form-label">Để lại lời nhắn:</label>
               <textarea class="form-control" id="note" name="note" rows="3" placeholder="Bạn có thể để lại thông tin thêm"></textarea>
             </div>
 
             <!-- Submit -->
             <div class="text-center">
-              <button type="submit" class="btn btn-success btn-lg">Đăng ký</button>
+              <button type="submit" class="btn btn-success btn-lg">Gửi thông tin</button>
             </div>
 
           </form>

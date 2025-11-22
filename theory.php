@@ -5,38 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Học lý thuyết GPLX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* THEORY PAGE */
-.theory-section {
-    padding: 40px 0;
-}
-
-.theory-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.theory-card {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.theory-card h3 {
-    margin-bottom: 10px;
-}
-
-.theory-card p {
-    color: #555;
-}
-
-.theory-card .btn {
-    display: inline-block;
-    margin-top: 10px;
-}
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
