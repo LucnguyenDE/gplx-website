@@ -16,7 +16,7 @@
     <section class="theory-section">
         <div class="container">
 
-            <h2>Bài học lý thuyết GPLX</h2>
+            <h2>Luật giao thông đường bộ</h2>
             <p>Hệ thống các bài học lý thuyết dành cho thi GPLX mô tô & ô tô.</p>
 
             <div class="theory-list">

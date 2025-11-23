@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM user_accounts WHERE username = '$username' LIMIT 1";
     $result = $conn->query($sql);
 
+
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
 

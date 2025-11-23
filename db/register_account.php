@@ -3,7 +3,7 @@ include 'db_connect.php';  // kết nối DB
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $username = $conn->real_escape_string($_POST['new_username']);
+    $username = $conn->real_escape_string($_POST['new_username']);//bắt buộc là string khi sử dụng trong SQL
     $password = $_POST['new_password'];
     $confirm  = $_POST['confirm_password'];
 
