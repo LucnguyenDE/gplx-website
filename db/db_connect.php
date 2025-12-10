@@ -1,16 +1,17 @@
 <?php
-$host = "localhost";    // localhost khi chạy XAMPP
-$user = "root";         // tài khoản MySQL mặc định
-$pass = "";             // mật khẩu mặc định để trống
-$dbname = "gplx_db";    // tên database đã tạo
+$serverName = "localhost";
+$connectionOptions = [
+    "Database" => "GPLX_CSDT",
+    "Uid" => "",
+    "PWD" => "",
+    "CharacterSet" => "UTF-8"
+];
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
+// Kết nối
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+if ($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
 }
 
-// echo "Kết nối thành công!";
 ?>
 ?>

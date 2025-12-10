@@ -1,46 +1,45 @@
 <?php
-session_start();
 include 'db_connect.php';  // kết nối database
 
-// Kiểm tra form gửi bằng POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $_POST['password'];
+$username = $_POST['username'] ?? '';
+$password = $_POST['password'] ?? '';
 
-    // Lấy tài khoản từ database
-    $sql = "SELECT * FROM user_accounts WHERE username = '$username' LIMIT 1";
-    $result = $conn->query($sql);
-
-
-    if ($result->num_rows === 1) {
-        $row = $result->fetch_assoc();
-
-        // Kiểm tra mật khẩu
-        if (password_verify($password, $row['password'])) {
-
-            // Lưu thông tin đăng nhập vào session
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['username'] = $row['username'];
-
-            echo "<script>
-                    alert('Đăng nhập thành công!');
-                    window.location.href='../index.php';
-                  </script>";
-            exit();
-        } else {
-            echo "<script>
-                    alert('Sai mật khẩu!');
-                    window.history.back();
-                  </script>";
-            exit();
-        }
-    } else {
-        echo "<script>
-                alert('Tài khoản không tồn tại!');
-                window.history.back();
-              </script>";
-        exit();
-    }
+// Kiểm tra kết nối database
+if ($conn === false) {
+    $_SESSION['error'] = "Lỗi hệ thống!";
+    header("Location: ../pages/login.php");
+    exit;
 }
-?>
+
+// 1. Lấy user theo username
+$sql = "SELECT * FROM Users WHERE Username = ?";
+$params = [$username];
+$stmt = sqlsrv_query($conn, $sql, $params);
+
+if ($stmt === false) {
+    $_SESSION['error'] = "Lỗi hệ thống!";
+    header("Location: ../pages/login.php");
+    exit;
+}
+
+$user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+
+// Chống User Enumeration + Timing attack
+$fake_hash = '$2y$10$KFaQzGv5d2L1IO2o0pOddOIoU7wQ0Vq1jZP0vyP3xXjK0L2gYV7Na';
+$hashToCheck = $user['PasswordHash'] ?? $fake_hash;
+
+// Kiểm tra password
+$loginOK = password_verify($password, $hashToCheck);
+
+// -----------------------------
+// KẾT LUẬN LOGIN
+// -----------------------------
+if ($loginOK && $user) {
+    // Lưu session nếu cần
+
+    header("Location: ../index.php");
+    exit;
+} else {
+    echo "<script>alert('Sai tên đăng nhập hoặc mật khẩu!'); window.location.href='../login.php';</script>";
+    exit;
+}
